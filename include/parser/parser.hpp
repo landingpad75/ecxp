@@ -1,8 +1,9 @@
 #pragma once
-#include "../lexer/lexer.hpp"
-#include "../ast.hpp"
-#include "../utilities/utils.hpp"
-#include "../config.hpp"
+#include <lexer/lexer.hpp>
+#include <extra/ast.hpp>
+#include <utilities/utils.hpp>
+#include <extra/config.hpp>
+
 #define PAST std::shared_ptr<AST::ExprAST>
 class Parser {
     public:

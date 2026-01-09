@@ -1,4 +1,4 @@
-#include "../parser.hpp"
+#include <parser/parser.hpp>
 
 PAST Parser::parseDSNotation() {
 		if(this->Tokens[pos].type != TokenType::DollarSign){

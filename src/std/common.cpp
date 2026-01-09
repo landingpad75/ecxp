@@ -1,25 +1,25 @@
 #ifdef STD_CONSOLE
-    #include "./console/console.hpp"
+    #include <std/console/console.hpp>
 #endif
 #ifdef STD_COLORS
-    #include "./colors/colors.hpp"    
+    #include <std/colors/colors.hpp>    
 #endif
 #ifdef STD_ECLIPTIX
-    #include "./ecx/ecliptix.hpp"    
+    #include <std/ecx/ecliptix.hpp>    
 #endif
 #ifdef STD_FILE
-    #include "./file/file.hpp"    
+    #include <std/file/file.hpp>    
 #endif
 #ifdef STD_GRAPHICS
-    #include "./graphics/graphics.hpp"    
+    #include <std/graphics/graphics.hpp>    
 #endif
 #ifdef STD_MATH
-    #include "./math/math.hpp"
+    #include <std/math/math.hpp>
 #endif
 
-#include "../utilities/env.hpp"
-#include "../utilities/utils.hpp"
-#include "../executor/executor.hpp"
+#include <utilities/env.hpp>
+#include <utilities/utils.hpp>
+#include <executor/executor.hpp>
 
 template <typename T>
 std::shared_ptr<T> createValue(T thing){

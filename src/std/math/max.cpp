@@ -1,5 +1,5 @@
 #ifdef STD_MATH
-#include "./math.hpp"
+#include <std/math/math.hpp>
 
 #define CAST(x) static_cast<Values::Number*>(x.get())->value()
 

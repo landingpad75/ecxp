@@ -1,7 +1,7 @@
 #ifdef STD_CONSOLE
-#include "../../values.hpp"
-#include "../../fnvalues.hpp"
-#include "../common.hpp"
+#include <extra/values.hpp>
+#include <extra/fnvalues.hpp>
+#include <std/common.hpp>
 #include <string>
 #include <iostream>
 

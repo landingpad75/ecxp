@@ -1,7 +1,7 @@
 #ifdef STD_CONSOLE
 #pragma once
-#include "../../values.hpp"
-#include "../../fnvalues.hpp"
+#include <extra/values.hpp>
+#include <extra/fnvalues.hpp>
 #include <memory>
 #include <thread>
 

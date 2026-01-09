@@ -29,9 +29,13 @@ list(FILTER Sources EXCLUDE REGEX "/CMakeFiles/")
 list(FILTER Sources EXCLUDE REGEX "/src/main.cpp")
 
 add_library(ecx STATIC ${Sources})
+target_include_directories(ecx
+    PUBLIC
+        include
+)
 
 set(CMAKE_BUILD_TYPE Debug)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 add_executable(ecxp "${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp")
 
 target_link_libraries(ecxp PRIVATE ecx)

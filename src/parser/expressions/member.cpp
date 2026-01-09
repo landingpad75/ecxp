@@ -1,4 +1,4 @@
-#include "../parser.hpp"
+#include <parser/parser.hpp>
 
 PAST Parser::parseMember() {
 	PAST object = this->ParsePrimary();

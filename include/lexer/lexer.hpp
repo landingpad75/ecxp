@@ -2,7 +2,6 @@
 #include <vector>
 #include <string>
 
-
 enum class TokenType {
 	Number,
 	String,

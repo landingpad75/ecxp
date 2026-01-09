@@ -1,5 +1,5 @@
 #ifdef STD_MATH
-#include "./math.hpp"
+#include <std/math/math.hpp>
 
 namespace Math {
     std::unique_ptr<Values::Runtime> sin(FunctionCallback* callback){

@@ -1,6 +1,6 @@
 #ifdef STD_GRAPHICS
-#include "../../values.hpp"
-#include "../../fnvalues.hpp"
+#include <extra/values.hpp>
+#include <extra/fnvalues.hpp>
 #include <memory>
 #include <map>
 #include <raylib.h>

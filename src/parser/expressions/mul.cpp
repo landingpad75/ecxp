@@ -1,4 +1,4 @@
-#include "../parser.hpp"
+#include <parser/parser.hpp>
 
 PAST Parser::ParseMultiplicativeExpression(){
 		PAST left = this->parseMemberCalls();

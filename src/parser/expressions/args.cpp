@@ -1,4 +1,4 @@
-#include "../parser.hpp"
+#include <parser/parser.hpp>
 
 std::vector<PAST> Parser::parseArgs() {
 	this->expectToken(TokenType::OpenParen);

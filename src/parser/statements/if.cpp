@@ -1,4 +1,4 @@
-#include "../parser.hpp"
+#include <parser/parser.hpp>
 
 PAST Parser::parseIf() {
 		Token token = this->expectToken(TokenType::If);

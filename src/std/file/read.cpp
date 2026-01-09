@@ -1,8 +1,8 @@
 #ifdef STD_FILE
-#include "../../values.hpp"
-#include "../../fnvalues.hpp"
-#include "../common.hpp"
-#include "../../utilities/utils.hpp"
+#include <extra/values.hpp>
+#include <extra/fnvalues.hpp>
+#include <std/common.hpp>
+#include <utilities/utils.hpp>
 #include <string>
 #include <iostream>
 

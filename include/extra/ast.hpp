@@ -3,7 +3,7 @@
 #include <vector>
 #include <memory>
 #include <optional>
-#include "./lexer/lexer.hpp"
+#include <lexer/lexer.hpp>
 
 namespace AST {
 

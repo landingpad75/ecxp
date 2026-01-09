@@ -1,7 +1,7 @@
 #ifdef STD_MATH
 #pragma once
-#include "../../values.hpp"
-#include "../../fnvalues.hpp"
+#include <extra/values.hpp>
+#include <extra/fnvalues.hpp>
 #include <memory>
 #include <cmath>
 

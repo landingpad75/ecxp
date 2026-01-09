@@ -1,4 +1,5 @@
-#include "utils.hpp"
+#include <utilities/utils.hpp>
+#include <extra/ast.hpp>
 #include <fstream>
 #include <sstream>
 
@@ -31,9 +32,6 @@ namespace Utilities {
         return st;
     }
 }
-
-
-#include "../ast.hpp"
 
 namespace AST {
     std::string stringifyAST(NodeType type){

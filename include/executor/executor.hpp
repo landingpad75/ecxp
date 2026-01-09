@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../values.hpp"
-#include "../ast.hpp"
-#include "../utilities/env.hpp"
+#include <extra/values.hpp>
+#include <extra/ast.hpp>
+#include <utilities/env.hpp>
 #include <memory>
 #include <stdexcept>
 #include <functional>

@@ -1,8 +1,8 @@
-#include "./lexer.hpp"
-#include "../utilities/utils.hpp"
+#include <lexer/lexer.hpp>
+#include <utilities/utils.hpp>
+#include <extra/config.hpp>
 #include <iostream>
 #include <map>
-#include "../config.hpp"
 #include <algorithm>
 #include <cctype>
 #include <string>

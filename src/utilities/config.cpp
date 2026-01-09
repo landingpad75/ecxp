@@ -1,7 +1,7 @@
 #include <string>
 #include <iostream>
-#include "toml.hpp"
-#include "../config.hpp"
+#include <utilities/toml.hpp>
+#include <extra/config.hpp>
 
 using std::cerr;
 

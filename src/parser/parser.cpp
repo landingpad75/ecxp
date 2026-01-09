@@ -1,4 +1,4 @@
-#include "parser.hpp"
+#include <parser/parser.hpp>
 
 std::shared_ptr<AST::ProgramRoot> Parser::produceAST(
 	std::string& sourceCode

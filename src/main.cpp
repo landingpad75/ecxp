@@ -1,7 +1,4 @@
-#include "parser/parser.hpp"
-#include "executor/executor.hpp"
-#include "std/console/asink.hpp"
-#include "ast.hpp"
+#include <ecxp.hpp>
 #include <iostream>
 
 struct GlobalConfig {
