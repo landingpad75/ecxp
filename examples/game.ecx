@@ -16,15 +16,15 @@ while(true){
 		int random = 60
 		money = money + random
 		console.out("You worked hard and gained", random)
-		process.wait(3)
+		ecx.wait(3)
 	} else if(thing == "2"){
 		console.out("This has not been implemented yet")
-		process.wait(3)
+		ecx.wait(3)
 	} else if(thing == "3"){
-		process.exit(0)
+		ecx.exit(0)
 	} else {
 		console.out("Invalid input")
-		process.wait(3)
+		ecx.wait(3)
 	}
 
 }
