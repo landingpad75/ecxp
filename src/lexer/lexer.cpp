@@ -31,35 +31,31 @@ Lexer::~Lexer(){
 
 }
 
-std::map<std::string, TokenType> Keywords()
-{
-    KeywordList keywords;
-    keywords["int"] = TokenType::Type;
-    keywords["float"] = TokenType::Type;
-    keywords["bool"] = TokenType::Type;
-    keywords["char*"] = TokenType::Type;
-    keywords["vector"] = TokenType::Type;
-    keywords["object"] = TokenType::Type;
-
-    keywords["set"] = TokenType::Set;
-    keywords["lock"] = TokenType::Lock;
-    keywords["fun"] = TokenType::Fun;
-    keywords["if"] = TokenType::If;
-    keywords["else"] = TokenType::Else;
-    keywords["for"] = TokenType::For;
-    keywords["while"] = TokenType::While;
-    keywords["return"] = TokenType::Return;
-    keywords["break"] = TokenType::Break;
-    keywords["take"] = TokenType::Take;
-    keywords["from"] = TokenType::From;
-    keywords["give"] = TokenType::Give;
-    keywords["using"] = TokenType::Using;
-    keywords["when"] = TokenType::When;
-    keywords["skip"] = TokenType::Skip;
-    keywords["class"] = TokenType::Class;
-    keywords["uses"] = TokenType::Uses;
-    return keywords;
-}
+static KeywordList keywords = {
+    {"int", TokenType::Type},
+    {"float", TokenType::Type},
+    {"bool", TokenType::Type},
+    {"char*", TokenType::Type},
+    {"vector", TokenType::Type},
+    {"object", TokenType::Type},
+    {"set", TokenType::Set},
+    {"lock", TokenType::Lock},
+    {"fun", TokenType::Fun},
+    {"if", TokenType::If},
+    {"else", TokenType::Else},
+    {"for", TokenType::For},
+    {"while", TokenType::While},
+    {"return", TokenType::Return},
+    {"break", TokenType::Break},
+    {"take", TokenType::Take},
+    {"from", TokenType::From},
+    {"give", TokenType::Give},
+    {"using", TokenType::Using},
+    {"when", TokenType::When},
+    {"skip", TokenType::Skip},
+    {"class", TokenType::Class},
+    {"uses", TokenType::Uses}
+};
 
 Token token(std::string value, TokenType type, int start, int end)
 {
@@ -76,13 +72,10 @@ Token tokenc(char c, TokenType type, int& pos, int& place) {
     return token(std::string(1, c), type, place++, place);
 }
 
-TokenArr Lexer::tokenize(std::string sourceCode)
-{
-    KeywordList keywords = Keywords();
+TokenArr Lexer::tokenize(std::string src) {
     TokenArr tokens{};
     int place = 0;
     int pos = 0;
-    std::string src = sourceCode;
 
     while (src.size() > pos)
     {
@@ -160,6 +153,7 @@ TokenArr Lexer::tokenize(std::string sourceCode)
             char odk = src[pos++];
             int start = place++;
             std::string str = "";
+            str.reserve(32);
             while (src.size() > 0 && src[pos] != odk)
             {
                 str += src[pos++];
