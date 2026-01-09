@@ -1,0 +1,48 @@
+#pragma once
+
+#include "values.hpp"
+#include "./utilities/env.hpp"
+#include <functional>
+#include <memory>
+
+namespace Values {
+
+class FunctionCallback {
+public:
+    std::string name;
+    std::vector<std::string> args;
+    std::vector<std::unique_ptr<Values::Runtime>> parsedArgs;
+    Environment* env;
+
+    void Errorout(const std::string& error, bool quit = true) noexcept {
+        std::cout << "\033[31m" << name << " errored out\033[0m: \033[36m" << error << "\033[0m" << std::endl;
+        if (quit) {
+            exit(7);
+        }
+    }
+};
+
+class NativeFN final : public ClonableRuntime<NativeFN> {
+public:
+    using NativeFunction = std::function<std::unique_ptr<Values::Runtime>(FunctionCallback*)>;
+    NativeFunction call;
+
+    explicit NativeFN(NativeFunction func) : call(std::move(func)) {}
+
+    const std::string& stringType() const override {
+        static const std::string TYPE = "native-fn";
+        return TYPE;
+    }
+
+    const Type& type() const override {
+        static const Type _Type = Type::NativeFunction;
+        return _Type;
+    }
+
+    const std::string& stringValue() const override {
+        static const std::string VALUE = "<nativeFN>";
+        return VALUE;
+    }
+};
+
+}

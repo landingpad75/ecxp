@@ -1,0 +1,9 @@
+test.cpp
+*.exe
+*.a
+*.zip
+node_modules
+.env
+*.h
+build
+compilers

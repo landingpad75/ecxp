@@ -1,0 +1,30 @@
+console.out("Welcome to Ecliptix!")
+
+int money = 0
+
+while(true){
+	$"clear"
+
+	console.out("Currently, you have", money)
+	console.out("[1] Work")
+	console.out("[2] Shop")
+	console.out("[3] Exit")
+
+	char* thing = console.ask("> ", "string")
+
+	if(thing == "1"){
+		int random = 60
+		money = money + random
+		console.out("You worked hard and gained", random)
+		process.wait(3)
+	} else if(thing == "2"){
+		console.out("This has not been implemented yet")
+		process.wait(3)
+	} else if(thing == "3"){
+		process.exit(0)
+	} else {
+		console.out("Invalid input")
+		process.wait(3)
+	}
+
+}
