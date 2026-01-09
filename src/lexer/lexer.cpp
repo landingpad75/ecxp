@@ -93,7 +93,7 @@ TokenArr Lexer::tokenize(std::string sourceCode)
         switch (src[pos])
         {
         case '=':
-            if (src[pos] != '=')
+            if (src[pos+1] != '=')
                 tokens.push_back(tokenc('=', TokenType::Equals, pos, place));
             else
             {
@@ -104,7 +104,7 @@ TokenArr Lexer::tokenize(std::string sourceCode)
             break;
 
         case '@':
-            if (src[pos] == '=')
+            if (src[pos+1] == '=')
             {
                 pos++;
                 pos++;
@@ -116,7 +116,7 @@ TokenArr Lexer::tokenize(std::string sourceCode)
             }
             break;
         case '!':
-            if (src[pos] == '=')
+            if (src[pos+1] == '=')
             {
                 pos++;
                 pos++;
