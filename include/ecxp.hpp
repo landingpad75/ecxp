@@ -11,6 +11,8 @@
 
 #include <parser/parser.hpp>
 
+#include <optimizer/optimizer.hpp>
+
 #include <std/console/asink.hpp>
 #include <std/console/console.hpp>
 #include <std/ecx/ecliptix.hpp>
