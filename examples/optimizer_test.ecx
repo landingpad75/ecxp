@@ -1,0 +1,18 @@
+int result1 = 5 + 3 * 2
+console.out("5 + 3 * 2 =", result1)
+
+int x = 10
+int y = x + 0
+int z = x * 1
+int w = x - 0
+console.out("x =", x, "x + 0 =", y, "x * 1 =", z, "x - 0 =", w)
+
+int zero_mult = 42 * 0
+console.out("42 * 0 =", zero_mult)
+
+lock int CONSTANT = 100
+int value = CONSTANT + 50
+console.out("CONSTANT + 50 =", value)
+
+int complex = 2 + 3 * 4 - 1 * 0 + 5
+console.out("2 + 3 * 4 - 1 * 0 + 5 =", complex)
